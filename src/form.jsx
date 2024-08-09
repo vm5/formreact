@@ -34,7 +34,7 @@ export default function ConnectPESChatbot() {
       .then((response) => {
         console.log('Email sent successfully:', response);
         setStep(2);
-        setMessage('Your answer has reached the concerned person. Thank you for taking some time out to answer the query!');
+        setMessage('Your details have been sent. We will connect you to someone shortly!');
       })
       .catch((error) => {
         console.error('Email sending failed:', error);
