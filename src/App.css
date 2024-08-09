@@ -45,7 +45,7 @@ body {
   cursor: pointer;
 }
 .side-component img {
-  max-width: 180%; /* Ensure image scales with its container */
+  max-width: 90%; /* Ensure image scales with its container */
   height: 50%; /* Maintain aspect ratio */
   border-radius: 10px; /* Rounded corners for image */
   margin-bottom: 15px; /* Space between image and text */
@@ -74,7 +74,7 @@ form {
   margin-left: 180px;
   display: flex;
   flex-direction: column;
-  gap: 40px; /* Adds space between form groups */
+
 }
 
 label {
