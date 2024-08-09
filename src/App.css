@@ -1,0 +1,147 @@
+/* General styling */
+body {
+  font-family: 'Verdana';
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.bg-gray-100 {
+  background-color: #f7f7f7;
+}
+
+/* Flexbox for proper alignment */
+.grid {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  gap: 20px; /* Add gap between side component and form */
+}
+
+.side-component {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.side-component button {
+  background-color: #495057;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+.side-component img {
+  max-width: 180%; /* Ensure image scales with its container */
+  height: 50%; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners for image */
+  margin-bottom: 15px; /* Space between image and text */
+  margin-top:15px;
+  align-items: center;
+}
+
+.side-component button:hover {
+  background-color: #6c757d;
+}
+
+.side-component p {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Main form styling */
+form {
+  background-color: #ffffff;
+  padding: 125px; /* Adjust padding to fit content better */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 3; /* Adjusted to take more space */
+  max-width: 100%; /* Make the form take full width of the container */
+  margin-left: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Adds space between form groups */
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px; /* Space between label and input */
+  color: #333333; /* Improved readability */
+}
+
+/* Stylish input and textarea styling */
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px; /* More rounded corners for a modern look */
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+textarea {
+  height: 100px; /* Fixed height */
+  max-width: 100%; /* Allows textarea to take full width */
+  background: linear-gradient(to top left, #f9f9f9, #eaeaea); /* Gradient background */
+}
+
+/* Submit button styling */
+button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px; /* Rounded corners for a modern look */
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Additional text styling */
+.text-center p {
+  font-size: 18px;
+  color: #333333;
+}
+
+.text-lg {
+  font-size: 24px;
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rounded-lg {
+  border-radius: 10px;
+}
