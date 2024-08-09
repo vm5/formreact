@@ -30,7 +30,7 @@ export default function ConnectPESChatbot() {
       contactMethod: formData.contactMethod,
     };
 
-    emailjs.send('service_nra8ibh', 'template_7zhdusk', emailData, 'vW5x6b44wyKCaQKLb')
+    emailjs.send('service_4ii20a5', 'template_fpxg518', emailData, 'U0Y3d6YQ3IXTIXliH')
       .then((response) => {
         console.log('Email sent successfully:', response);
         setStep(2);
