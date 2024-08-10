@@ -60,10 +60,11 @@ body {
 /* Main form styling */
 form {
   background-color: #ffffff;
-  padding: 150px; /* Adjusted padding for a balanced look */
+  padding: 170px; /* Adjusted padding for a balanced look */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex: 3;
+  padding-top: 50px;
   max-width: 100%;
   margin-left: 0; /* Adjusted margin for better alignment */
   display: flex;
