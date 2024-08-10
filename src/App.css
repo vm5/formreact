@@ -19,7 +19,7 @@ body {
   display: flex;
   flex-direction: row;
   min-height: 100vh;
-  gap: 20px; /* Add gap between side component and form */
+ 
 }
 
 .side-component {
