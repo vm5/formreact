@@ -34,7 +34,7 @@ export default function ConnectPESChatbot() {
       .then((response) => {
         console.log('Email sent successfully:', response);
         setStep(2);
-        setMessage('Your answer has reached the concerned person. Thank you for taking some time out to answer the query!');
+        setMessage('Your details have been sent. We will connect you to someone shortly!');
       })
       .catch((error) => {
         console.error('Email sending failed:', error);
@@ -59,7 +59,7 @@ export default function ConnectPESChatbot() {
           </button>
           <div className="mt-6 text-gray-400 text-sm leading-relaxed">
             <img src="/nucleus-removebg-preview.png" alt="NUCLEUS" className="rounded-lg shadow-md" />
-            <p className="mt-4">Welcome to nucleusFUSION! This form helps you connect with mentors if you require tips on cracking an interview for your preferred organization. Please enter the following details:</p>
+            <p className="mt-4">Welcome to nucleusFUSION! This form helps you connect with mentors if you require additional information about your preferred organization. Please enter the following details:</p>
           </div>
         </div>
         <div className="flex flex-col items-start flex-1 p-8 max-w-2xl mx-auto bg-gray-100 shadow-lg rounded-lg text-gray-900">
