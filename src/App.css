@@ -1,17 +1,9 @@
 /* General styling */
 body {
   font-family: 'Verdana';
-  background-color: #f7f7f7;
+  background-color: #f1f1f1; /* Slightly lighter background */
   margin: 0;
   padding: 0;
-}
-
-.min-h-screen {
-  min-height: 100vh;
-}
-
-.bg-gray-100 {
-  background-color: #f7f7f7;
 }
 
 /* Flexbox for proper alignment */
@@ -19,7 +11,7 @@ body {
   display: flex;
   flex-direction: row;
   min-height: 100vh;
- 
+  padding: 20px; /* Added padding for consistent spacing */
 }
 
 .side-component {
@@ -32,6 +24,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
+  margin-right: 20px; /* Added margin for spacing */
 }
 
 .side-component button {
@@ -43,14 +36,14 @@ body {
   width: 100%;
   text-align: left;
   cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
 }
+
 .side-component img {
-  max-width: 90%; /* Ensure image scales with its container */
-  height: 50%; /* Maintain aspect ratio */
-  border-radius: 10px; /* Rounded corners for image */
-  margin-bottom: 15px; /* Space between image and text */
-  margin-top:15px;
-  align-items: center;
+  max-width: 70%; /* Ensure image scales correctly */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
 
 .side-component button:hover {
@@ -61,40 +54,42 @@ body {
   margin-top: 20px;
   font-size: 14px;
   line-height: 1.6;
+  color: #e0e0e0; /* Light color for better readability */
 }
 
 /* Main form styling */
 form {
   background-color: #ffffff;
-  padding: 125px; /* Adjust padding to fit content better */
+  padding: 150px; /* Adjusted padding for a balanced look */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  flex: 3; /* Adjusted to take more space */
-  max-width: 100%; /* Make the form take full width of the container */
-  margin-left: 180px;
+  flex: 3;
+  max-width: 100%;
+  margin-left: 0; /* Adjusted margin for better alignment */
   display: flex;
   flex-direction: column;
-
 }
 
 label {
   display: block;
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 8px; /* Space between label and input */
-  color: #333333; /* Improved readability */
+  margin-bottom: 8px;
+  margin-top: 20px;
+  color: #333333;
 }
 
 /* Stylish input and textarea styling */
 input[type="text"],
 textarea {
-  width: 100%;
-  padding: 14px;
-  border-radius: 8px; /* More rounded corners for a modern look */
+  height: 50px; /* Adjusted height for consistency */
+  max-width: 100%;
+  border-radius: 5px; /* Less rounded for a modern look */
   border: 1px solid #ccc;
-  background-color: #ffffff;
+  padding: 12px;
+  background: linear-gradient(to top left, #f9f9f9, #eaeaea);
   font-size: 16px;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input[type="text"]:focus,
@@ -105,18 +100,16 @@ textarea:focus {
 
 textarea {
   height: 100px; /* Fixed height */
-  max-width: 100%; /* Allows textarea to take full width */
-  background: linear-gradient(to top left, #f9f9f9, #eaeaea); /* Gradient background */
+  background: linear-gradient(to top left, #f9f9f9, #eaeaea);
 }
 
 /* Submit button styling */
 button[type="submit"] {
   width: 100%;
   padding: 14px;
-  background-color: #007bff;
+  background-color: #abb9c9;
   color: #ffffff;
-  border: none;
-  border-radius: 8px; /* Rounded corners for a modern look */
+  border: navajowhite;
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
