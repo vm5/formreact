@@ -85,7 +85,7 @@ export default function ConnectPESChatbot() {
                 />
               </div>
               <div style={styles.formGroup}>
-                <label style={styles.label}>The organization you are interviewing for:</label>
+                <label style={styles.label}>The organization you want to enquire about. Please elaborate on the details:</label>
                 <input
                   name="company"
                   value={formData.company}
@@ -240,7 +240,7 @@ const styles = {
     fontFamily: 'Verdana',
   },
   input: {
-    width: '75%',
+    width: '100%',
     padding: '12px',
     borderRadius: '8px',
     border: '1px solid #CBD5E0',
@@ -272,7 +272,6 @@ const styleSheet = document.styleSheets[0];
 styleSheet.insertRule(`
   @keyframes moveBackground {
     0% { background-position: 0% 0%; }
-    50% { background-position: 100% 100%; }
-    100% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
   }
 `, styleSheet.cssRules.length);
