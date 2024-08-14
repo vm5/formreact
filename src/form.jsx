@@ -57,7 +57,7 @@ export default function ConnectPESChatbot() {
               style={styles.sideImage}
             />
             <p style={styles.welcomeText}>
-              Welcome to nucleusFUSION! This form helps you connect with mentors if you require additional information about your preferred organization. Please enter the following details:
+              Welcome to nucleusFUSION! This form helps you connect with mentors if you require tips on cracking an interview call. Please enter the following details:
             </p>
           </div>
         </div>
@@ -85,7 +85,7 @@ export default function ConnectPESChatbot() {
                 />
               </div>
               <div style={styles.formGroup}>
-                <label style={styles.label}>The organization you want to enquire about. Please elaborate on the details:</label>
+                <label style={styles.label}>The organization you are interviewing for:</label>
                 <input
                   name="company"
                   value={formData.company}
