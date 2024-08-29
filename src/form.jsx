@@ -153,6 +153,7 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     animation: 'moveBackground 30s linear infinite',
+    padding: '20px', // Add padding for better spacing on small screens
   },
   chatbox: {
     display: 'grid',
@@ -248,7 +249,7 @@ const styles = {
     boxSizing: 'border-box',
   },
   submitButton: {
-    width: '40%',
+    width: '100%', // Set to 100% for better responsiveness on small screens
     padding: '12px',
     background: 'linear-gradient(to right, orange, blue)',
     color: 'white',
