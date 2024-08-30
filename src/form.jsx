@@ -168,7 +168,7 @@ const styles = {
     margin: '20px',
   },
   sideComponent: {
-    background: 'linear-gradient(to right, orange, red)',
+    background: 'white';
     padding: '24px',
     display: 'flex',
     flexDirection: 'column',
@@ -251,7 +251,7 @@ const styles = {
   submitButton: {
     width: '100%', // Set to 100% for better responsiveness on small screens
     padding: '12px',
-    background: 'linear-gradient(to right, orange, blue)',
+    background: 'black';
     color: 'white',
     borderRadius: '8px',
     border: 'none',
