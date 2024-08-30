@@ -168,7 +168,7 @@ const styles = {
     margin: '20px',
   },
   sideComponent: {
-    background: 'white';
+    background: 'white',
     padding: '24px',
     display: 'flex',
     flexDirection: 'column',
