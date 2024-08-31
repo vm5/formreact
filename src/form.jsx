@@ -46,7 +46,7 @@ export default function ConnectPESChatbot() {
     <div style={styles.container}>
       <div style={styles.chatbox}>
         <div style={styles.sideComponent}>
-          <a href="https://nucleusfusion.netlify.app/" style={styles.nucleusLink}>
+          <a href="https://student-ko6p.vercel.app/" style={styles.nucleusLink}>
             <BotIcon style={styles.botIcon} />
             <span style={styles.nucleusText}>nucleusFUSION</span>
           </a>
