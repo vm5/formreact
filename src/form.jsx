@@ -152,7 +152,6 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    animation: 'moveBackground 30s linear infinite',
     padding: '20px', // Add padding for better spacing on small screens
   },
   chatbox: {
@@ -174,7 +173,7 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    color: '#FFFFFF',
+    color: '#2D3748',
   },
   nucleusLink: {
     display: 'flex',
@@ -196,7 +195,7 @@ const styles = {
   nucleusText: {
     fontSize: '20px',
     fontWeight: 'bold',
-    fontFamily: 'Verdana',
+    fontFamily: 'Verdana, sans-serif',
   },
   sideContent: {
     marginTop: '20px',
@@ -238,7 +237,7 @@ const styles = {
     marginBottom: '8px',
     fontSize: '16px',
     fontWeight: 'bold',
-    fontFamily: 'Verdana',
+    fontFamily: 'Verdana, sans-serif',
   },
   input: {
     width: '100%',
@@ -251,7 +250,7 @@ const styles = {
   submitButton: {
     width: '100%', // Set to 100% for better responsiveness on small screens
     padding: '12px',
-    background: 'black';
+    backgroundColor: 'black',
     color: 'white',
     borderRadius: '8px',
     border: 'none',
