@@ -152,7 +152,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '20px', // Add padding for better spacing on small screens
+    padding: '20px',
   },
   chatbox: {
     display: 'grid',
@@ -226,7 +226,7 @@ const styles = {
     borderTop: '1px solid #E2E8F0',
   },
   form: {
-    width: '75%',
+    width: '100%', // Changed to 100% for responsiveness
     maxWidth: '600px',
   },
   formGroup: {
@@ -248,7 +248,7 @@ const styles = {
     boxSizing: 'border-box',
   },
   submitButton: {
-    width: '100%', // Set to 100% for better responsiveness on small screens
+    width: '100%',
     padding: '12px',
     backgroundColor: 'black',
     color: 'white',
@@ -267,11 +267,29 @@ const styles = {
   },
 };
 
-// CSS Keyframes for the animation
+// Add media queries for responsive styles
 const styleSheet = document.styleSheets[0];
 styleSheet.insertRule(`
-  @keyframes moveBackground {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 100% 100%; }
+  @media (max-width: 768px) {
+    .chatbox {
+      grid-template-columns: 1fr; /* Single column layout for small screens */
+    }
+    
+    .sideComponent, .formContainer {
+      padding: 16px; /* Reduced padding for smaller screens */
+    }
+    
+    .sideImage {
+      max-width: 150px; /* Smaller image on mobile */
+    }
+    
+    .form {
+      width: 100%; /* Full width form on small screens */
+    }
+    
+    .submitButton {
+      padding: 10px; /* Adjusted padding for smaller screens */
+    }
   }
 `, styleSheet.cssRules.length);
+
