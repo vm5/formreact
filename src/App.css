@@ -1,4 +1,7 @@
-/* General styling */
+.App {
+  text-align: center;
+  overflow-x: hidden;
+}
 body {
   font-family: 'Verdana';
   background-color: #f1f1f1; /* Slightly lighter background */
