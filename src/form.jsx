@@ -47,7 +47,7 @@ export default function ConnectPESChatbot() {
     <div className="container">
       <div className="chatbox">
         <div className="sideComponent">
-          <a href="/" className="nucleusLink">
+          <a href="https://student-ko6p.vercel.app/" className="nucleusLink">
             <BotIcon className="botIcon" />
             <span className="nucleusText">Heinweis</span>
           </a>
