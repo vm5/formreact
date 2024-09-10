@@ -1,142 +1,141 @@
-/* ConnectPESChatbot.css */
-.container {
-  min-height: 100vh;
-  width: 100%;
-  color: #2d3748;
-  background-image: url("public/sky-2668711_1280.jpg");
-  background-size: cover;
-  background-position: center;
+/* General styling */
+body {
+  font-family: 'Verdana';
+  background-color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+}
+
+/* Flexbox for proper alignment */
+.grid {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+}
+
+/* Side component styling */
+.side-component {
+  background-color: #343a40;
+  color: #ffffff;
   padding: 20px;
-}
-
-.chatbox {
-  display: grid;
-  grid-template-columns: 1fr;
-  min-height: 80vh;
-  width: 90%;
-  max-width: 1200px;
-  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  margin: 20px;
-}
-
-.sideComponent {
-  background: white;
-  padding: 24px;
+  flex: 1;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #2d3748;
+  margin-right: 20px;
 }
 
-.nucleusLink {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 12px 16px;
-  background-color: #ffffff;
-  color: #1a202c;
-  border-radius: 8px;
-  text-decoration: none;
-  margin-bottom: 16px;
-}
-
-.botIcon {
-  width: 20px;
-  height: 40px;
-  color: #2d3748;
-}
-
-.sideImage {
-  border-radius: 8px;
-  width: 100%;
-  max-width: 200px;
-  margin-bottom: 16px;
-}
-
-.formContainer {
-  background-color: #f7fafc;
-  color: #2d3748;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-top: 1px solid #e2e8f0;
-}
-
-.form {
-  width: 100%;
-  max-width: 600px;
-}
-
-.formGroup {
-  margin-bottom: 20px;
-}
-
-.label {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 16px;
-  font-weight: bold;
-  font-family: Verdana;
-}
-
-.input {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #cbd5e0;
-  background-color: #ffffff;
-  box-sizing: border-box;
-}
-
-.submitButton {
-  width: 100%;
-  padding: 12px;
-  background-color: black;
-  color: white;
-  border-radius: 8px;
+.side-component button {
+  background-color: #495057;
+  color: #ffffff;
   border: none;
+  padding: 12px;
+  border-radius: 8px;
+  width: 100%;
+  text-align: left;
   cursor: pointer;
-  font-weight: 600;
-  text-transform: uppercase;
-  margin-top: 20px;
   transition: background-color 0.3s ease;
 }
 
-.successMessage {
-  text-align: center;
-  font-size: 18px;
-  font-weight: 600;
+.side-component img {
+  max-width: 70%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
 
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-  .chatbox {
-    grid-template-columns: 1fr;
-  }
+.side-component button:hover {
+  background-color: #6c757d;
+}
 
-  .sideComponent, .formContainer {
-    padding: 16px;
-  }
+.side-component p {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
 
-  .sideImage {
-    max-width: 150px;
-  }
+/* Main form styling */
+form {
+  background-color: #f1f1f1;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 3;
+  max-width: 100%;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top:0;
 
-  .form {
-    width: 100%;
-  }
+}
 
-  .submitButton {
-    padding: 10px;
-  }
+label {
+  display: list-item;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  margin-top: 20px;
+  color: #333333;
+}
+
+/* Stylish input and textarea styling */
+input[type="text"],
+textarea {
+  height: 250px;
+  max-width: 100%;
+  border: 1px solid #ccc;
+  padding: 25px; /* Increase padding for larger input fields */
+  background: linear-gradient(to top left, #f9f9f9, #eaeaea);
+  font-size: 18px; /* Increase font size for better readability */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+textarea {
+  height: 200px; /* Adjust height as needed */
+  background: linear-gradient(to top left, #f9f9f9, #eaeaea);
+}
+
+/* Submit button styling */
+button[type="submit"] {
+  width: 75%;
+  padding: 14px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  margin-left:150px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Additional text styling */
+.text-center p {
+  font-size: 18px;
+  color: #333333;
+}
+
+.text-lg {
+  font-size: 24px;
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rounded-lg {
+  border-radius: 10px;
 }
