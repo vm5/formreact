@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import './App.css';
 
 export default function ConnectPESChatbot() {
   const [step, setStep] = useState(1);
@@ -43,73 +44,73 @@ export default function ConnectPESChatbot() {
   };
 
   return (
-    <div style={styles.container}>
-      <div style={styles.chatbox}>
-        <div style={styles.sideComponent}>
-          <a href="https://student-ko6p.vercel.app/" style={styles.nucleusLink}>
-            <BotIcon style={styles.botIcon} />
-            <span style={styles.nucleusText}>nucleusFUSION</span>
+    <div className="container">
+      <div className="chatbox">
+        <div className="sideComponent">
+          <a href="/" className="nucleusLink">
+            <BotIcon className="botIcon" />
+            <span className="nucleusText">Heinweis</span>
           </a>
-          <div style={styles.sideContent}>
+          <div className="sideContent">
             <img
-              src="/nucleus-removebg-preview.png"
+              src="/logo-removebg-preview (5).png"
               alt="NUCLEUS"
-              style={styles.sideImage}
+              className="sideImage"
             />
-            <p style={styles.welcomeText}>
-              Welcome to nucleusFUSION! This form helps you connect with mentors if you require tips on cracking an interview call of your preferred organization. Please enter the following details:
+            <p className="welcomeText">
+              Welcome to Heinweis! This form helps you connect with mentors if you require tips on cracking an interview call of your preferred organization. Please enter the following details:
             </p>
           </div>
         </div>
-        <div style={styles.formContainer}>
+        <div className="formContainer">
           {step === 1 ? (
-            <form onSubmit={handleSubmit} style={styles.form}>
-              <div style={styles.formGroup}>
-                <label style={styles.label}>Your Full Name:</label>
+            <form onSubmit={handleSubmit} className="form">
+              <div className="formGroup">
+                <label className="label">Your Full Name:</label>
                 <input
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  style={styles.input}
+                  className="input"
                 />
               </div>
-              <div style={styles.formGroup}>
-                <label style={styles.label}>Your SRN:</label>
+              <div className="formGroup">
+                <label className="label">Your SRN:</label>
                 <input
                   name="srn"
                   value={formData.srn}
                   onChange={handleChange}
                   required
-                  style={styles.input}
+                  className="input"
                 />
               </div>
-              <div style={styles.formGroup}>
-                <label style={styles.label}>The organization you are interviewing for. You may elaborate on the same:</label>
+              <div className="formGroup">
+                <label className="label">The organization you are interviewing for. You may elaborate on the same:</label>
                 <input
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
                   required
-                  style={styles.input}
+                  className="input"
                 />
               </div>
-              <div style={styles.formGroup}>
-                <label style={styles.label}>Your Contact(s) (email, phone):</label>
+              <div className="formGroup">
+                <label className="label">Your Contact(s) (email, phone):</label>
                 <input
                   name="contactMethod"
                   value={formData.contactMethod}
                   onChange={handleChange}
                   required
-                  style={styles.input}
+                  className="input"
                 />
               </div>
-              <button type="submit" style={styles.submitButton}>
+              <button type="submit" className="submitButton">
                 Submit your details
               </button>
             </form>
           ) : (
-            <div style={styles.successMessage}>
+            <div className="successMessage">
               <p>{message}</p>
             </div>
           )}
@@ -140,156 +141,3 @@ function BotIcon(props) {
     </svg>
   );
 }
-
-const styles = {
-  container: {
-    minHeight: '100vh',
-    width: '100%',
-    color: '#2D3748',
-    backgroundImage: 'url("/sky-2668711_1280.jpg")',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: '20px',
-  },
-  chatbox: {
-    display: 'grid',
-    gridTemplateColumns: '1fr',
-    minHeight: '80vh',
-    width: '90%',
-    maxWidth: '1200px',
-    backgroundColor: 'rgba(255, 255, 255, 0.9)',
-    borderRadius: '10px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    overflow: 'hidden',
-    margin: '20px',
-  },
-  sideComponent: {
-    background: 'white',
-    padding: '24px',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    color: '#2D3748',
-  },
-  nucleusLink: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: '8px',
-    padding: '12px 16px',
-    backgroundColor: '#ffffff',
-    color: '#1a202c',
-    borderRadius: '8px',
-    textDecoration: 'none',
-    marginBottom: '16px',
-  },
-  botIcon: {
-    width: '20px',
-    height: '40px',
-    color: '#2d3748',
-  },
-  nucleusText: {
-    fontSize: '20px',
-    fontWeight: 'bold',
-    fontFamily: 'Verdana, sans-serif',
-  },
-  sideContent: {
-    marginTop: '20px',
-    color: '#2D3748',
-    fontSize: '25px',
-    lineHeight: '1.6',
-    textAlign: 'center',
-    fontWeight: '500',
-    fontFamily: 'Arial, sans-serif',
-  },
-  sideImage: {
-    borderRadius: '8px',
-    width: '100%',
-    maxWidth: '200px',
-    marginBottom: '16px',
-  },
-  welcomeText: {
-    margin: '0',
-  },
-  formContainer: {
-    backgroundColor: '#F7FAFC',
-    color: '#2D3748',
-    padding: '24px',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderTop: '1px solid #E2E8F0',
-  },
-  form: {
-    width: '100%', // Changed to 100% for responsiveness
-    maxWidth: '600px',
-  },
-  formGroup: {
-    marginBottom: '20px',
-  },
-  label: {
-    display: 'block',
-    marginBottom: '8px',
-    fontSize: '16px',
-    fontWeight: 'bold',
-    fontFamily: 'Verdana, sans-serif',
-  },
-  input: {
-    width: '100%',
-    padding: '12px',
-    borderRadius: '8px',
-    border: '1px solid #CBD5E0',
-    backgroundColor: '#FFFFFF',
-    boxSizing: 'border-box',
-  },
-  submitButton: {
-    width: '100%',
-    padding: '12px',
-    backgroundColor: 'black',
-    color: 'white',
-    borderRadius: '8px',
-    border: 'none',
-    cursor: 'pointer',
-    fontWeight: '600',
-    textTransform: 'uppercase',
-    marginTop: '20px',
-    transition: 'background-color 0.3s ease',
-  },
-  successMessage: {
-    textAlign: 'center',
-    fontSize: '18px',
-    fontWeight: '600',
-  },
-};
-
-// Add media queries for responsive styles
-const styleSheet = document.styleSheets[0];
-styleSheet.insertRule(`
-  @media (max-width: 768px) {
-    .chatbox {
-      grid-template-columns: 1fr; /* Single column layout for small screens */
-    }
-    
-    .sideComponent, .formContainer {
-      padding: 16px; /* Reduced padding for smaller screens */
-    }
-    
-    .sideImage {
-      max-width: 150px; /* Smaller image on mobile */
-    }
-    
-    .form {
-      width: 100%; /* Full width form on small screens */
-    }
-    
-    .submitButton {
-      padding: 10px; /* Adjusted padding for smaller screens */
-    }
-  }
-`, styleSheet.cssRules.length);
-
