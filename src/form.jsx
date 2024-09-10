@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
-import './App.css';
 
 export default function ConnectPESChatbot() {
   const [step, setStep] = useState(1);
@@ -44,73 +43,73 @@ export default function ConnectPESChatbot() {
   };
 
   return (
-    <div className="container">
-      <div className="chatbox">
-        <div className="sideComponent">
-          <a href="https://student-ko6p.vercel.app/" className="nucleusLink">
-            <BotIcon className="botIcon" />
-            <span className="nucleusText">Heinweis</span>
+    <div style={styles.container}>
+      <div style={styles.chatbox}>
+        <div style={styles.sideComponent}>
+          <a href="https://nucleus-fusion.vercel..app/" style={styles.nucleusLink}>
+            <BotIcon style={styles.botIcon} />
+            <span style={styles.nucleusText}>Heinweis</span>
           </a>
-          <div className="sideContent">
+          <div style={styles.sideContent}>
             <img
               src="/logo-removebg-preview (5).png"
               alt="NUCLEUS"
-              className="sideImage"
+              style={styles.sideImage}
             />
-            <p className="welcomeText">
+            <p style={styles.welcomeText}>
               Welcome to Heinweis! This form helps you connect with mentors if you require tips on cracking an interview call of your preferred organization. Please enter the following details:
             </p>
           </div>
         </div>
-        <div className="formContainer">
+        <div style={styles.formContainer}>
           {step === 1 ? (
-            <form onSubmit={handleSubmit} className="form">
-              <div className="formGroup">
-                <label className="label">Your Full Name:</label>
+            <form onSubmit={handleSubmit} style={styles.form}>
+              <div style={styles.formGroup}>
+                <label style={styles.label}>Your Full Name:</label>
                 <input
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="input"
+                  style={styles.input}
                 />
               </div>
-              <div className="formGroup">
-                <label className="label">Your SRN:</label>
+              <div style={styles.formGroup}>
+                <label style={styles.label}>Your SRN:</label>
                 <input
                   name="srn"
                   value={formData.srn}
                   onChange={handleChange}
                   required
-                  className="input"
+                  style={styles.input}
                 />
               </div>
-              <div className="formGroup">
-                <label className="label">The organization you are interviewing for. You may elaborate on the same:</label>
+              <div style={styles.formGroup}>
+                <label style={styles.label}>The organization you are interviewing for. You may elaborate on the same:</label>
                 <input
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
                   required
-                  className="input"
+                  style={styles.input}
                 />
               </div>
-              <div className="formGroup">
-                <label className="label">Your Contact(s) (email, phone):</label>
+              <div style={styles.formGroup}>
+                <label style={styles.label}>Your Contact(s) (email, phone):</label>
                 <input
                   name="contactMethod"
                   value={formData.contactMethod}
                   onChange={handleChange}
                   required
-                  className="input"
+                  style={styles.input}
                 />
               </div>
-              <button type="submit" className="submitButton">
+              <button type="submit" style={styles.submitButton}>
                 Submit your details
               </button>
             </form>
           ) : (
-            <div className="successMessage">
+            <div style={styles.successMessage}>
               <p>{message}</p>
             </div>
           )}
@@ -141,3 +140,138 @@ function BotIcon(props) {
     </svg>
   );
 }
+
+const styles = {
+  container: {
+    minHeight: '100vh',
+    width: '100%',
+    color: '#2D3748',
+    backgroundImage: 'url("/sky-2668711_1280.jpg")',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    animation: 'moveBackground 30s linear infinite',
+  },
+  chatbox: {
+    display: 'grid',
+    gridTemplateColumns: '1fr',
+    minHeight: '80vh',
+    width: '90%',
+    maxWidth: '1200px',
+    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+    borderRadius: '10px',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    overflow: 'hidden',
+    margin: '20px',
+  },
+  sideComponent: {
+    background: 'linear-gradient(to right, orange, red)',
+    padding: '24px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: '#FFFFFF',
+  },
+  nucleusLink: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '8px',
+    padding: '12px 16px',
+    backgroundColor: '#ffffff',
+    color: '#1a202c',
+    borderRadius: '8px',
+    textDecoration: 'none',
+    marginBottom: '16px',
+  },
+  botIcon: {
+    width: '20px',
+    height: '40px',
+    color: '#2d3748',
+  },
+  nucleusText: {
+    fontSize: '20px',
+    fontWeight: 'bold',
+    fontFamily: 'Verdana',
+  },
+  sideContent: {
+    marginTop: '20px',
+    color: '#2D3748',
+    fontSize: '25px',
+    lineHeight: '1.6',
+    textAlign: 'center',
+    fontWeight: '500',
+    fontFamily: 'Verdana',
+  },
+  sideImage: {
+    borderRadius: '8px',
+    width: '100%',
+    maxWidth: '200px',
+    marginBottom: '16px',
+  },
+  welcomeText: {
+    margin: '0',
+  },
+  formContainer: {
+    backgroundColor: '#F7FAFC',
+    color: '#2D3748',
+    padding: '24px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderTop: '1px solid #E2E8F0',
+  },
+  form: {
+    width: '75%',
+    maxWidth: '600px',
+  },
+  formGroup: {
+    marginBottom: '20px',
+  },
+  label: {
+    display: 'block',
+    marginBottom: '8px',
+    fontSize: '16px',
+    fontWeight: 'bold',
+    fontFamily: 'Verdana',
+  },
+  input: {
+    width: '100%',
+    padding: '12px',
+    borderRadius: '8px',
+    border: '1px solid #CBD5E0',
+    backgroundColor: '#FFFFFF',
+    boxSizing: 'border-box',
+  },
+  submitButton: {
+    width: '40%',
+    padding: '12px',
+    background: 'linear-gradient(to right, orange, blue)',
+    color: 'white',
+    borderRadius: '8px',
+    border: 'none',
+    cursor: 'pointer',
+    fontWeight: '600',
+    textTransform: 'uppercase',
+    marginTop: '20px',
+    transition: 'background-color 0.3s ease',
+  },
+  successMessage: {
+    textAlign: 'center',
+    fontSize: '18px',
+    fontWeight: '600',
+  },
+};
+
+// CSS Keyframes for the animation
+const styleSheet = document.styleSheets[0];
+styleSheet.insertRule(`
+  @keyframes moveBackground {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+  }
+`, styleSheet.cssRules.length);
