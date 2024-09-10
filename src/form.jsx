@@ -146,13 +146,6 @@ const styles = {
     minHeight: '100vh',
     width: '100%',
     color: '#2D3748',
-    backgroundImage: 'url("/sky-2668711_1280.jpg")',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    animation: 'moveBackground 30s linear infinite',
   },
   chatbox: {
     display: 'grid',
